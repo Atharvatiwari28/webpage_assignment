@@ -1,0 +1,132 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Navbar Styles */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    z-index: 1000;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar span {
+    font-size: 24px;
+}
+
+/* Main Container */
+.main-container {
+    display: flex;
+    margin-top: 60px; /* To account for the fixed navbar */
+}
+
+/* Left Menu */
+.left-menu {
+    width: 250px;
+    background-color: #f4f4f4;
+    padding: 10px;
+    transition: width 0.3s;
+}
+
+.left-menu .menu-content {
+    display: block;
+}
+
+.left-menu ul {
+    list-style-type: none;
+}
+
+.left-menu ul li a {
+    text-decoration: none;
+    color: #333;
+    padding: 8px 0;
+    display: block;
+}
+
+/* Right Panel */
+.right-panel {
+    width: 250px;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+/* Footer Styles */
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1600px) and (min-width: 992px) {
+    .main-container {
+        transform: scale(0.9);
+    }
+}
+
+@media (max-width: 767px) and (min-width: 700px) {
+    .main-container {
+        transform: scale(0.8);
+    }
+}
+
+@media (max-width: 700px) and (min-width: 600px) {
+    .main-container {
+        transform: scale(0.75);
+    }
+}
+
+@media (max-width: 600px) {
+    .main-container {
+        transform: scale(0.5);
+    }
+}
+
+/* Collapsible Menu Styles */
+.collapse-btn {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.collapse-btn:focus {
+    outline: none;
+}
+
+.left-menu .menu-content {
+    display: none;
+}
+
+.left-menu.open .menu-content {
+    display: block;
+}
+
